@@ -93,17 +93,6 @@ img {
   margin: 0;
 }
 
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -308,7 +297,6 @@ img {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  /* transition: opacity 600ms linear; */
 }
 
 .backdrop.is-hidden .modal {
@@ -920,6 +908,18 @@ img {
 .list-portfolio .img-card:focus .description {
   transform: translateY(0);
 }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 /* 
 .item-card:nth-child(3n) {
   margin-right: 0;
