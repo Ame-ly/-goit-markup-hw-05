@@ -290,7 +290,7 @@ img {
   background: var(--backdrop);
 
   opacity: 1;
-  transition: opacity 300ms linear;
+  transition: opacity var(--time) var(--timing-function);
 }
 
 .is-hidden {
@@ -300,6 +300,7 @@ img {
 }
 
 .backdrop.is-hidden .modal {
+  opacity: 0;
   transform: translate(-50%, -50%) scale(0.2) rotate(180deg);
 }
 
@@ -318,7 +319,7 @@ img {
   background-color: var(--white);
   opacity: 1;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  transition: transform 300ms linear, opacity 300ms linear;
+  transition: transform, opacity var(--time), var(--time) var(--timing-function);
 }
 
 .modal .modal-button {
