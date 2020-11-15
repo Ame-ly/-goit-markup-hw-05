@@ -56,8 +56,8 @@
   --transparent-white-light: rgba(255, 255, 255, 0.6);
   --transparent-white-dark: rgba(255, 255, 255, 0.1);
   --backdrop: rgba(0, 0, 0, 0.2);
-  --timing-function: var(--timing-function);
-  --time: var(--time);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --time: 250ms;
 }
 
 html {
@@ -290,7 +290,7 @@ img {
   background: var(--backdrop);
 
   opacity: 1;
-  transition: opacity 600ms linear;
+  transition: opacity 300ms linear;
 }
 
 .is-hidden {
@@ -300,7 +300,7 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.2) rotate(360deg);
+  transform: translate(-50%, -50%) scale(0.2) rotate(180deg);
 }
 
 .modal {
@@ -318,7 +318,7 @@ img {
   background-color: var(--white);
   opacity: 1;
   transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  transition: transform 600ms linear, opacity 600ms linear;
+  transition: transform 300ms linear, opacity 300ms linear;
 }
 
 .modal .modal-button {
